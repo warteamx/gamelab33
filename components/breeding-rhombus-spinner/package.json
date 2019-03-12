@@ -1,0 +1,15 @@
+{
+    "name": "@bit/bondz.react-epic-spinners.breeding-rhombus-spinner",
+    "version": "0.3.0",
+    "homepage": "https://bitsrc.io/bondz/react-epic-spinners/breeding-rhombus-spinner",
+    "main": "dist/BreedingRhombusSpinner.js",
+    "dependencies": {
+        "react": ">=0.14.x",
+        "prop-types": "^15.6.0",
+        "styled-components": "^2.4.0"
+    },
+    "devDependencies": {},
+    "peerDependencies": {},
+    "componentRootFolder": "components/breeding-rhombus-spinner",
+    "license": "SEE LICENSE IN LICENSE"
+}

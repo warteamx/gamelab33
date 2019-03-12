@@ -4,13 +4,18 @@
   "private": true,
   "dependencies": {
     "@bit/bondz.react-epic-spinners.atom-spinner": "^0.3.0",
+    "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "@bit/bondz.react-epic-spinners.scaling-squares-spinner": "file:./components/scaling-squares-spinner",
+    "@bit/bondz.react-epic-spinners.semipolar-spinner": "file:./components/semipolar-spinner",
+    "@bit/bondz.react-epic-spinners.breeding-rhombus-spinner": "file:./components/breeding-rhombus-spinner"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://game-lab-33",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
