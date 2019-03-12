@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://game-lab-33",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
