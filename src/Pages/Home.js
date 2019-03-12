@@ -48,20 +48,26 @@ function Home() {
 <div className="col">
 <ScalingSquaresSpinner
 	color='#ffffff'
-	size='200'
+    size='200'
+    className='spiner'
 	/>
+    <p> Lab Hub </p>
 </div>
 <div className="col">
 <SemipolarSpinner
 	color='#ffffff'
-	size='200'
+    size='200'
+    className='spiner'
 	/>
+    <p>Resources</p>
 </div>
 <div className="col">
 <BreedingRhombusSpinner
 	color='#ffffff'
-	size='200'
+    size='200'
+    className='spiner'
 	/>
+    <p>Project 33</p>
 </div>
 
 </div>
