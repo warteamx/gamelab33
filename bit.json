@@ -1,6 +1,10 @@
 {
     "env": {},
-    "dependencies": {},
+    "dependencies": {
+        "bondz.react-epic-spinners/scaling-squares-spinner": "0.3.0",
+        "bondz.react-epic-spinners/semipolar-spinner": "0.3.0",
+        "bondz.react-epic-spinners/breeding-rhombus-spinner": "0.3.0"
+    },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
 }
