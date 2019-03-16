@@ -25,3 +25,5 @@ yarn-error.log*
 
 # bit packge
 .bit
+/components
+

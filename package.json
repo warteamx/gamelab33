@@ -4,13 +4,14 @@
   "private": true,
   "dependencies": {
     "@bit/bondz.react-epic-spinners.atom-spinner": "^0.3.0",
+    "@bit/bondz.react-epic-spinners.breeding-rhombus-spinner": "file:./components/breeding-rhombus-spinner",
+    "@bit/bondz.react-epic-spinners.scaling-squares-spinner": "file:./components/scaling-squares-spinner",
+    "@bit/bondz.react-epic-spinners.semipolar-spinner": "file:./components/semipolar-spinner",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8",
-    "@bit/bondz.react-epic-spinners.scaling-squares-spinner": "file:./components/scaling-squares-spinner",
-    "@bit/bondz.react-epic-spinners.semipolar-spinner": "file:./components/semipolar-spinner",
-    "@bit/bondz.react-epic-spinners.breeding-rhombus-spinner": "file:./components/breeding-rhombus-spinner"
+    "react-router-dom": "^4.4.0",
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
