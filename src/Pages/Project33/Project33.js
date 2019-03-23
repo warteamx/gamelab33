@@ -1,16 +1,16 @@
 import React from 'react';
-import './Labhub.scss';
+import './Project33.scss';
 import video from './../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4';
-import ScalingSquaresSpinner from '@bit/bondz.react-epic-spinners.scaling-squares-spinner';
+import BreedingRhombusSpinner from '@bit/bondz.react-epic-spinners.breeding-rhombus-spinner';
 import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
-import microscope from '../../img/microscope.svg';
+import padlock from '../../img/padlock.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
 
 
+ 
 
-
-function Labhub() {
+function Project33() {
 
     return (
         <>
@@ -21,26 +21,26 @@ function Labhub() {
 
 <div className="content">
 <TopMenu/>
-  <h1>Lab Hub</h1>
-  <p>Research and Development </p>
-  <ScalingSquaresSpinner
-	color='#ffffff'
-    size={100}
-    className='spiner'
-	/>
+  <h1>Project33</h1>
+  <p> WIP </p>
+  <BreedingRhombusSpinner
+                            color='#ffffff'
+                            size={200}
+                            className='spiner'
+                        />
 
   {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
 </div>
 <div className="container-blocks">
 <Grid container spacing={24}>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 1" text="The Start of Human Life"></Card>
+
 </Grid>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 2" text="Blocked"></Card>
+<Card src={padlock} title="Project 33" text="Restringed Area"></Card>
 </Grid>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 3" text="Blocked"></Card>
+
 </Grid>
 </Grid>
 
@@ -49,4 +49,4 @@ function Labhub() {
     )
 }
 
-export default Labhub;
+export default Project33;

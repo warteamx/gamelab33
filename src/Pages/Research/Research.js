@@ -1,16 +1,16 @@
 import React from 'react';
-import './Labhub.scss';
+import './Research.scss';
 import video from './../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4';
-import ScalingSquaresSpinner from '@bit/bondz.react-epic-spinners.scaling-squares-spinner';
+import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
-import microscope from '../../img/microscope.svg';
+import research from '../../img/research.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
 
 
+ 
 
-
-function Labhub() {
+function Research() {
 
     return (
         <>
@@ -21,9 +21,9 @@ function Labhub() {
 
 <div className="content">
 <TopMenu/>
-  <h1>Lab Hub</h1>
+  <h1>Research</h1>
   <p>Research and Development </p>
-  <ScalingSquaresSpinner
+  <SemipolarSpinner
 	color='#ffffff'
     size={100}
     className='spiner'
@@ -34,13 +34,13 @@ function Labhub() {
 <div className="container-blocks">
 <Grid container spacing={24}>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 1" text="The Start of Human Life"></Card>
+<Card src={research} title="MERN" text="Mongo Express React Node"></Card>
 </Grid>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 2" text="Blocked"></Card>
+<Card src={research} title="DevOps" text="Blocked"></Card>
 </Grid>
 <Grid item xs={4}>
-<Card src={microscope} title="Lab 3" text="Blocked"></Card>
+<Card src={research} title="Game Design" text="Blocked"></Card>
 </Grid>
 </Grid>
 
@@ -49,4 +49,4 @@ function Labhub() {
     )
 }
 
-export default Labhub;
+export default Research;

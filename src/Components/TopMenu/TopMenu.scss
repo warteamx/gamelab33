@@ -1,0 +1,30 @@
+/* Add a black background color to the top navigation */
+.topmenu {
+    background-color: transparent;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topmenu-link{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topmenu-link:hover {
+    background-color: #ddd;
+    color: black;
+    font-weight: bold;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+
+  
