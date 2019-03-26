@@ -10,43 +10,50 @@ import TopMenu from '../../Components/TopMenu/TopMenu';
 
 
 
+
+
+
+
 function Labhub() {
 
-    return (
-        <>
+  return (
+    <>
 
-<video autoPlay muted loop id="myVideo">
-  <source src={video} type="video/mp4"/>
-</video>
+      <video autoPlay muted loop id="myVideo">
+        <source src={video} type="video/mp4" />
+      </video>
 
-<div className="content">
-<TopMenu/>
-  <h1>Lab Hub</h1>
-  <p>Research and Development </p>
-  <ScalingSquaresSpinner
-	color='#ffffff'
-    size={100}
-    className='spiner'
-	/>
+      <div className="content">
+        <TopMenu />
+        <h1>Lab Hub</h1>
+        <p>Research and Development </p>
+        <ScalingSquaresSpinner
+          color='#ffffff'
+          size={100}
+          className='spiner'
+        />
 
-  {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
-</div>
-<div className="container-blocks">
-<Grid container spacing={24}>
-<Grid item xs={4}>
-<Card src={microscope} title="Lab 1" text="The Start of Human Life"></Card>
-</Grid>
-<Grid item xs={4}>
-<Card src={microscope} title="Lab 2" text="Blocked"></Card>
-</Grid>
-<Grid item xs={4}>
-<Card src={microscope} title="Lab 3" text="Blocked"></Card>
-</Grid>
-</Grid>
+        {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
+      </div>
+      <div className="container-blocks">
+        <Grid container spacing={24}>
+          <Grid item xs={4}>
+            <a href="http://lab-1-phaser.s3-website.eu-west-3.amazonaws.com/" target="_blank" rel="noopener noreferrer" >
+              <Card src={microscope} title="Lab 1" text="Game Lab">
+              </Card>
+            </a>
+          </Grid>
+          <Grid item xs={4}>
+            <Card src={microscope} title="Lab 2" text="Blocked"></Card>
+          </Grid>
+          <Grid item xs={4}>
+            <Card src={microscope} title="Lab 3" text="Blocked"></Card>
+          </Grid>
+        </Grid>
 
-</div>
-        </>
-    )
+      </div>
+    </>
+  )
 }
 
 export default Labhub;

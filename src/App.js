@@ -6,6 +6,12 @@ import Home from './Pages/Home/Home';
 import Labhub from './Pages/Labhub/Labhub';
 import Research from './Pages/Research/Research';
 import Project33 from './Pages/Project33/Project33';
+import Lab1 from './Lab/Lab1/Lab1';
+
+
+function Lab1Page() {
+  return <Lab1/>
+}
 
 function Project33Page() {
   return <Project33/>
@@ -37,6 +43,7 @@ function App() {
         <Route path="/Labhub" component={LabhubPage}></Route>
         <Route path="/Research" component={ResearchPage}></Route>
         <Route path="/Project33" component={Project33Page}></Route>
+        <Route path="/Lab1" component={Lab1Page}></Route>
       </div>
       </Router>
     );
