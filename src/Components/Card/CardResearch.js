@@ -1,15 +1,16 @@
 import React from 'react';
 import './Card.scss';
 
-export default function Card(props) {
+export default function CardResearch(props) {
     return(
         <div className="card">
         <img src={props.src} alt=""></img>
         <h3>{props.title}</h3>
-        <p> {props.text}</p>
+        <p> {props.description}</p>
+        <p>{props.type}</p>
+        <p> {props.tags}</p>
+        <p> {props.author}</p>
 
         </div>
     ) 
 }
-
-

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Project33.scss';
-import video from './../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4';
 import BreedingRhombusSpinner from '@bit/bondz.react-epic-spinners.breeding-rhombus-spinner';
 import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
 import padlock from '../../img/padlock.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
+import VideoBackground from '../../Components/VideoBackground/VideoBackground';
 
 
  
@@ -15,10 +15,7 @@ function Project33() {
     return (
         <>
 
-<video autoPlay muted loop id="myVideo">
-  <source src={video} type="video/mp4"/>
-</video>
-
+<VideoBackground/> 
 <div className="content">
 <TopMenu/>
   <h1>Project33</h1>

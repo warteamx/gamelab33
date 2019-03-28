@@ -2,40 +2,19 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import AtomSpinner from '@bit/bondz.react-epic-spinners.atom-spinner';
 import './Home.scss';
-import video from './../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4';
 import ScalingSquaresSpinner from '@bit/bondz.react-epic-spinners.scaling-squares-spinner';
 import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import BreedingRhombusSpinner from '@bit/bondz.react-epic-spinners.breeding-rhombus-spinner';
-import TopMenu from '../../Components/TopMenu/TopMenu';
+import VideoBackground from '../../Components/VideoBackground/VideoBackground';
 
 
 function Home() {
 
-    //    var video = document.getElementById("myVideo");
-
-    //     // Get the button
-    //     var btn = document.getElementById("myBtn");
-
-    //     // Pause and play the video, and change the button text
-    //     function handleClick() {
-    //       if (video.paused) {
-    //         video.play();
-    //         btn.innerHTML = "Pause";
-    //       } else {
-    //         video.pause();
-    //         btn.innerHTML = "Play";
-    //       }
-    //     }
-
-
     return (
         <>
 
-            <video autoPlay muted loop id="myVideo">
-                <source src={video} type="video/mp4" />
-            </video>
-            <div className="content">
-            <TopMenu/> 
+<VideoBackground/>
+            <div className="content-video">
                 <h1>Game Lab 33</h1>
                 <p>An space to Learn and Experiment </p>
                 <AtomSpinner
