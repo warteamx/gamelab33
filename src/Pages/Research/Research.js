@@ -35,7 +35,7 @@ function Research() {
 <Grid container spacing={24}>
 <Grid item xs={4}>
 <a href="/research1">
-<Card src={research} title="MERN" text="Mongo Express React Node"></Card>
+<Card src={research} title="Web Development" text="Mongo, Express, React, Node"></Card>
 </a>
 </Grid>
 <Grid item xs={4}>
