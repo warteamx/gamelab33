@@ -11,6 +11,9 @@ export default function Research1() {
         <VideoBackground/>
         <div className="content-video" > 
         <TopMenu/>
+        <h1>Research ONE </h1>
+  <p>Web Development </p>
+
         <Grid container spacing={8}>
         <Grid item xs={12} sm={4}>
         <CardResearch title="Computer Science" description="The OSSU curriculum is a complete education in computer science using online materials. " duration="2 years - 22h/week" type="course" tags="programming, math, theory, " author="Open Source " link="https://github.com/ossu/computer-science"/>
@@ -23,8 +26,6 @@ export default function Research1() {
         </Grid>
         <AddResearchCard/>
         </Grid>
-        <p>It is working</p>
-
         </div>
         </>
     )
