@@ -6,7 +6,7 @@ import Labhub from './Pages/Labhub/Labhub';
 import Research from './Pages/Research/Research';
 import Project33 from './Pages/Project33/Project33';
 import Lab1 from './Lab/Lab1/Lab1';
-import Research1 from './Research/Research1';
+import Research1 from './Pages/Research/Research1/Research1';
 import VideoBackground from './Components/VideoBackground/VideoBackground';
 
 function Research1Page () {

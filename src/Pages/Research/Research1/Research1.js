@@ -1,9 +1,9 @@
 import React from 'react';
-import CardResearch from '../Components/Card/CardResearch';
+import CardResearch from '../../../Components/Card/CardResearch';
 import Grid from "@bit/mui-org.material-ui.grid";
-import TopMenu from "../Components/TopMenu/TopMenu";
-import VideoBackground from '../Components/VideoBackground/VideoBackground';
-import AddResearchCard from '../Components/AddResearchCard/AddResearchCard';
+import TopMenu from "../../../Components/TopMenu/TopMenu";
+import VideoBackground from '../../../Components/VideoBackground/VideoBackground';
+import AddResearchCard from '../../../Components/AddResearchCard/AddResearchCard';
 
 export default function Research1() {
     return(

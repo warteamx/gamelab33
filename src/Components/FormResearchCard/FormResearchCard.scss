@@ -1,0 +1,18 @@
+input {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+display: block;
+    padding: 4px;
+    margin: 50px !important;
+    width: 70%;
+    color: #fff;
+}
+.ui.basic.modal> .content {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}

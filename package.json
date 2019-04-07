@@ -10,6 +10,7 @@
     "@bit/mui-org.material-ui.card": "^3.9.2",
     "@bit/mui-org.material-ui.grid": "^3.9.2",
     "@bit/semantic-org.semantic-ui-react.grid": "^0.85.0",
+    "@bit/semantic-org.semantic-ui-react.modal": "^0.86.0",
     "node-sass": "^4.11.0",
     "phaser": "^3.16.2",
     "react": "^16.8.4",
