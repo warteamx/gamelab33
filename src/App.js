@@ -8,6 +8,12 @@ import Project33 from './Pages/Project33/Project33';
 import Lab1 from './Lab/Lab1/Lab1';
 import Research1 from './Pages/Research/Research1/Research1';
 import VideoBackground from './Components/VideoBackground/VideoBackground';
+import Research2 from './Pages/Research/Research1/Research2';
+
+function Research2Page() {
+  return <Research2 />
+}
+
 
 function Research1Page () {
   return  <Research1/>
@@ -39,13 +45,14 @@ function App() {
     return (
       <Router>
       <div className="App">
-<VideoBackground/>
+{/* <VideoBackground/> */}
         <Route path="/" exact component={HomePage}></Route>
         <Route path="/Labhub" component={LabhubPage}></Route>
         <Route path="/Research" component={ResearchPage}></Route>
         <Route path="/Project33" component={Project33Page}></Route>
         <Route path="/Lab1" component={Lab1Page}></Route>
         <Route path="/Research1" component={Research1Page}></Route>
+        <Route path="/Research2" component={Research2Page}></Route>
       </div>
       </Router>
     );

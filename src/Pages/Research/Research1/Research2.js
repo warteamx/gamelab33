@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import './FormResearchCard.scss';
+// /client/App.js
+import React, { Component } from "react";
 import axios from "axios";
 
-class FromResearchCard extends Component {
-
+class Research2 extends Component {
+  // initialize our state 
   state = {
     data: [],
     id: 0,
-    title: null,
+    message: null,
     intervalIsSet: false,
     idToDelete: null,
     idToUpdate: null,
@@ -20,7 +20,7 @@ class FromResearchCard extends Component {
   componentDidMount() {
     this.getDataFromDb();
     if (!this.state.intervalIsSet) {
-      let interval = setInterval(this.getDataFromDb, 5000);
+      let interval = setInterval(this.getDataFromDb, 1000);
       this.setState({ intervalIsSet: interval });
     }
   }
@@ -49,7 +49,7 @@ class FromResearchCard extends Component {
 
   // our put method that uses our backend api
   // to create new query into our data base
-  putDataToDB = title => {
+  putDataToDB = message => {
     let currentIds = this.state.data.map(data => data.id);
     let idToBeAdded = 0;
     while (currentIds.includes(idToBeAdded)) {
@@ -58,7 +58,7 @@ class FromResearchCard extends Component {
 
     axios.post("http://localhost:3001/api/putData", {
       id: idToBeAdded,
-      title: title
+      message: message
     });
   };
 
@@ -93,7 +93,7 @@ class FromResearchCard extends Component {
 
     axios.post("http://localhost:3001/api/updateData", {
       id: objIdToUpdate,
-      update: { title: updateToApply }
+      update: { message: updateToApply }
     });
   };
 
@@ -109,27 +109,28 @@ class FromResearchCard extends Component {
           {data.length <= 0
             ? "NO DB ENTRIES YET"
             : data.map(dat => (
-                <li style={{ padding: "10px" }} key={data.title}>
+                <li style={{ padding: "10px" }} key={data.message}>
                   <span style={{ color: "gray" }}> id: </span> {dat.id} <br />
                   <span style={{ color: "gray" }}> data: </span>
-                  {dat.title}
+                  {dat.message}
                 </li>
               ))}
         </ul>
         <div style={{ padding: "10px" }}>
           <input
             type="text"
-            onChange={e => this.setState({ title: e.target.value })}
-            placeholder="add title in the database"
+            onChange={e => this.setState({ message: e.target.value })}
+            placeholder="add something in the database"
+            style={{ width: "200px" }}
           />
-          <button onClick={() => this.putDataToDB(this.state.title)}>
+          <button onClick={() => this.putDataToDB(this.state.message)}>
             ADD
           </button>
         </div>
-        <div >
+        <div style={{ padding: "10px" }}>
           <input
             type="text"
-            
+            style={{ width: "200px" }}
             onChange={e => this.setState({ idToDelete: e.target.value })}
             placeholder="put id of item to delete here"
           />
@@ -137,14 +138,16 @@ class FromResearchCard extends Component {
             DELETE
           </button>
         </div>
-        <div >
+        <div style={{ padding: "10px" }}>
           <input
             type="text"
+            style={{ width: "200px" }}
             onChange={e => this.setState({ idToUpdate: e.target.value })}
             placeholder="id of item to update here"
           />
           <input
             type="text"
+            style={{ width: "200px" }}
             onChange={e => this.setState({ updateToApply: e.target.value })}
             placeholder="put new value of the item here"
           />
@@ -160,4 +163,5 @@ class FromResearchCard extends Component {
     );
   }
 }
-export default FromResearchCard;
+
+export default Research2;
