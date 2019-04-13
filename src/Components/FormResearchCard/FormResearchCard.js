@@ -1,32 +1,50 @@
-import React from 'react'
-import firebase from "firebase"
+import React, { useState, useEffect } from 'react'
+import './FormResearchCard.scss';
+import fire from '../../fire'
 
 export default function FormResearchCard() {
-  
-  var config = {
-    apiKey: "AIzaSyAsFV6oddVNePcYl-hSuzBf70_ciJw-bfU",
-    authDomain: "lab-33.firebaseapp.com",
-    databaseURL: "https://lab-33.firebaseio.com",
-    storageBucket: "lab-33.appspot.com"
-  };
-  firebase.initializeApp(config);
 
-  var db = firebase.firestore();
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [link, setLink] = useState("");
 
-  db.collection("card-research").add({
-    description: "Ada",
-    link: "Lovelace",
-    title: 1815
-})
-.then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-})
-.catch(function(error) {
-    console.error("Error adding document: ", error);
-});
+  let data = { title, description, link };
+
+  function sendData(e) {
+    e.preventDefault();
+    console.log(data);
+    fire.collection('card-research').add({
+      title: data.title,
+      description: data.description,
+      link: data.link
+    }).then(
+      function (docRef) {
+        console.log("Document written with ID: ", docRef.id)
+      }
+    ).catch(
+      function (error) {
+        console.error("Error adding document: ", error);
+      }
+    );
+  }
 
   return (
-    <div> It it working </div>
+    <form onSubmit={(e) => { sendData(e) }}>
+      <input type="text" placeholder="Title" value={title} onChange={(e) => {
+        e.preventDefault();
+        setTitle(e.target.value)
+      }
+      } />
+      <input type="text" placeholder="Description" value={description} onChange={(e) => {
+        e.preventDefault();
+        setDescription(e.target.value)
+      }} />
+      <input type="text" placeholder="Link" value={link} onChange={(e) => {
+        e.preventDefault();
+        setLink(e.target.value)
+      }} />
+      <input type="submit" />
+    </form>
 
   )
 }
