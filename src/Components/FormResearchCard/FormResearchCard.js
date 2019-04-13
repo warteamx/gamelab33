@@ -19,7 +19,16 @@ export default function FormResearchCard() {
       link: data.link
     }).then(
       function (docRef) {
-        console.log("Document written with ID: ", docRef.id)
+        console.log("Document written with ID: ", docRef.id);
+        alert( `You added a new card:
+        title: ${data.title } 
+        description: ${data.link}
+        link: ${data.link}
+        `)
+        setTitle("");
+        setDescription("");
+        setLink("");
+
       }
     ).catch(
       function (error) {
@@ -43,7 +52,7 @@ export default function FormResearchCard() {
         e.preventDefault();
         setLink(e.target.value)
       }} />
-      <input type="submit" />
+      <button type="submit" className="submit"> Submit Card </button>
     </form>
 
   )
