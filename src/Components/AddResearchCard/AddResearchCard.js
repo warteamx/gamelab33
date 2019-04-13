@@ -18,7 +18,7 @@ return (
   <Modal trigger={<Button onClick={()=>setOpen(true)}>Add Research Card</Button>} 
   basic size='small'
 open={open}
-onClose={open}
+onClose={ () => setOpen(false)}
   >
     <Modal.Content>
       <p>
