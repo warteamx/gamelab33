@@ -13,7 +13,7 @@ export default function Research1() {
 
     useEffect(() => {
 
-        fire.collection('card-research')
+        fire.collection('card')
             .get()
             .then(function (querySnapshot) {
                 let data = querySnapshot.docs.map(function (documentSnapshot) {
@@ -32,7 +32,7 @@ export default function Research1() {
             <div className="content-video" style={ {color: theme.primary, background: theme.background } } >
                 <TopMenu />
                 <h1>Research ONE </h1>
-                <p>Research Cards Number {dataCard.length}  </p>
+                <p> {dataCard.length} Research Cards   </p>
                 <AddResearchCard />
                 <Grid container spacing={8}>
 {dataCard.map((dataCard, index) => {
@@ -40,6 +40,8 @@ export default function Research1() {
     title={dataCard.title} 
      description={dataCard.description}
      link={dataCard.link}
+     branch={dataCard.branch}
+     type={dataCard.type}
      style={ {color: theme.primary } }
      />
 })}

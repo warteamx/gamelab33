@@ -71,4 +71,37 @@ a {
   border: 1px solid #fff;
   padding: 20px;
   margin: 10px;
+  max-width: 30%;
+  min-width: 300px;
+}
+
+.card p {
+  text-align: justify;
+}
+.icon {
+  padding: 5px;
+}
+
+.icon-branch::before {
+  display: block;
+  content: "";
+  background-image: url(./img/branch.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  clear: both;
+}
+
+.icon-type::before {
+  display: block;
+  content: "";
+  background-image: url(./img/type.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 20px;
+  height: 20px;
+  clear: both;
 }

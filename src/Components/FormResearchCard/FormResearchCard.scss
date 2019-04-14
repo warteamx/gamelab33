@@ -15,8 +15,7 @@ display: block;
 }
 
 .inputRadio {
-    padding: 30px;
-    margin: 20px;
+    margin: 5px 3px 10px 20px;
     font-size: 25px;
 }
 .ui.basic.modal> .content {
@@ -25,11 +24,15 @@ display: block;
 }
 
  .submit {
-    width: 30%;
+    width: 20%;
     background-color: green;
     color: white;
     padding: 10px;
     margin: auto;
     position: relative;
-    left: 25%;
+    left: 5%;
+}
+
+.paragraph {
+    margin: 15px 0px 1px 0px;
 }
