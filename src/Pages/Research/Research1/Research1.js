@@ -3,7 +3,7 @@ import CardResearch from '../../../Components/Card/CardResearch';
 import Grid from "@bit/mui-org.material-ui.grid";
 import TopMenu from "../../../Components/TopMenu/TopMenu";
 import VideoBackground from '../../../Components/VideoBackground/VideoBackground';
-import AddResearchCard from '../../../Components/AddResearchCard/AddResearchCard';
+import AddResearchCard from '../../../HOC/AddResearchCard/AddResearchCard';
 import fire from '../../../fire';
 
 

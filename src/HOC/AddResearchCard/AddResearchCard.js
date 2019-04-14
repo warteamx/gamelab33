@@ -4,7 +4,7 @@ import Button from '@bit/semantic-org.semantic-ui-react.button'
 // import { Header } from 'semantic-ui-react'
 import Icon from '@bit/semantic-org.semantic-ui-react.icon'
 import Modal from '@bit/semantic-org.semantic-ui-react.modal'
-import FormResearchCard from '../FormResearchCard/FormResearchCard';
+import FormResearchCard from '../../Components/FormResearchCard/FormResearchCard';
 
 
 const style = <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css'/>

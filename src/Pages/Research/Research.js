@@ -6,6 +6,7 @@ import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
 import research from '../../img/research.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
+import VideoBackground from '../../Components/VideoBackground/VideoBackground';
 
 
  
@@ -14,12 +15,9 @@ function Research() {
 
     return (
         <>
+<VideoBackground/>
 
-<video autoPlay muted loop id="myVideo">
-  <source src={video} type="video/mp4"/>
-</video>
-
-<div className="content">
+<div className="content-video">
 <TopMenu/>
   <h1>Research</h1>
   <p>Research and Development </p>

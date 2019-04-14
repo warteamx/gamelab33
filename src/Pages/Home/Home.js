@@ -6,6 +6,7 @@ import ScalingSquaresSpinner from '@bit/bondz.react-epic-spinners.scaling-square
 import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import BreedingRhombusSpinner from '@bit/bondz.react-epic-spinners.breeding-rhombus-spinner';
 import VideoBackground from '../../Components/VideoBackground/VideoBackground';
+import GeneralStyleButton from '../../Theme/GeneralStyleButton/GeneralStyleButton';
 
 
 function Home() {
@@ -14,7 +15,10 @@ function Home() {
         <>
 
 <VideoBackground/>
+
             <div className="content-video">
+            <GeneralStyleButton/> 
+            <br></br>   
                 <h1>Game Lab 33</h1>
                 <p>An space to Learn and Experiment </p>
                 <AtomSpinner
