@@ -1,5 +1,4 @@
 import React from 'react';
-import './Card.scss';
 
 export default function CardResearch(props) {
     return(
@@ -11,7 +10,7 @@ export default function CardResearch(props) {
         <p>{props.type}</p>
         <p> {props.tags}</p>
         <p> {props.author}</p>
-        <a href={props.link} target="_blank" > Link </a>
+        <a href={props.link} target="_blank" rel="noopener noreferrer" > Link </a>
 
         </div>
     ) 

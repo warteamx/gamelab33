@@ -1,40 +1,36 @@
 import React from 'react';
-import './Research.scss';
-import video from './../../img/Cieling_Flames_4K_Motion_Background_Loop (1).mp4';
+import { useStateValue } from '../../State/State';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import SemipolarSpinner from '@bit/bondz.react-epic-spinners.semipolar-spinner';
 import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
 import research from '../../img/research.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
-import VideoBackground from '../../Components/VideoBackground/VideoBackground';
 
 
- 
 
 function Research() {
-
+  const [{ theme }, dispatch] = useStateValue();
     return (
         <>
-<VideoBackground/>
-
-<div className="content-video">
+<div className="content-video" style={ {color: theme.primary, background: theme.background } }>
 <TopMenu/>
   <h1>Research</h1>
   <p>Research and Development </p>
   <SemipolarSpinner
-	color='#ffffff'
+	color={theme.primary}
     size={100}
     className='spiner'
 	/>
 
   {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
 </div>
-<div className="container-blocks">
+<div className="container-blocks" style={ {color: theme.primary } }>
 <Grid container spacing={24}>
 <Grid item xs={4}>
-<a href="/research1">
+<Link to="/research1" style={ {color: theme.primary } }>
 <Card src={research} title="Web Development" text="Mongo, Express, React, Node"></Card>
-</a>
+</Link>
 </Grid>
 <Grid item xs={4}>
 <Card src={research} title="DevOps" text="Blocked"></Card>

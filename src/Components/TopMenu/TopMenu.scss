@@ -13,13 +13,13 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    border: 1px solid transparent;
   }
   
   /* Change the color of links on hover */
   .topmenu-link:hover {
-    background-color: #ddd;
-    color: black;
     font-weight: bold;
+    border: 1px solid white;
   }
 
   .clear {

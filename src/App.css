@@ -16,12 +16,8 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -39,15 +35,40 @@
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
-  z-index: -100;
+  z-index: -999;
 }
 
 .content-video {
   position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, 0.0);
-  color: #f1f1f1;
   width: 100%;
-  padding: 30px;
+  height: 100%;
   flex-grow: 1;
+}
+
+.spiner {
+  margin: auto;
+}
+
+.container-blocks {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.col {
+    display: inline-block;
+    width: 33%;
+    margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.card {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin: 10px;
 }

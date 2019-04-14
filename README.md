@@ -22,6 +22,10 @@ https://bitsrc.io/
 Firebase get data 
 https://medium.com/@scarygami/cloud-firestore-quicktip-documentsnapshot-vs-querysnapshot-70aef6d57ab3
 
+Global State> 
+https://medium.com/simply/state-management-with-react-hooks-and-context-api-at-10-lines-of-code-baf6be8302c
+
+
 
 Icons
 <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -31,5 +35,8 @@ https://www.flaticon.com/free-icon/microscope_947539
 
 https://www.flaticon.com/free-icon/padlock_934575
 
+
+Video by Engin Akyurt from Pexels
+https://www.pexels.com/video/smoke-or-vapor-in-the-air-1722881/
 
 

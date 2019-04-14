@@ -1,34 +1,32 @@
 import React from 'react';
-import './Project33.scss';
+import { useStateValue } from '../../State/State';
 import BreedingRhombusSpinner from '@bit/bondz.react-epic-spinners.breeding-rhombus-spinner';
 import Grid from "@bit/mui-org.material-ui.grid";
 import Card from '../../Components/Card/Card';
 import padlock from '../../img/padlock.svg';
 import TopMenu from '../../Components/TopMenu/TopMenu';
-import VideoBackground from '../../Components/VideoBackground/VideoBackground';
 
 
  
 
 function Project33() {
-
+    const [{ theme }, dispatch] = useStateValue();
     return (
         <>
 
-<VideoBackground/> 
-<div className="content">
+<div className="content-video" style={ {color: theme.primary, background: theme.background } }>
 <TopMenu/>
   <h1>Project33</h1>
   <p> WIP </p>
   <BreedingRhombusSpinner
-                            color='#ffffff'
+                            color={theme.primary}
                             size={200}
                             className='spiner'
                         />
 
   {/* <button id="myBtn" onClick={handleClick()}>Pause</button> */}
 </div>
-<div className="container-blocks">
+<div className="container-blocks" style={ {color: theme.primary} }>
 <Grid container spacing={24}>
 <Grid item xs={4}>
 

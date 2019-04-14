@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useStateValue } from '../../../State/State';
 import CardResearch from '../../../Components/Card/CardResearch';
 import Grid from "@bit/mui-org.material-ui.grid";
 import TopMenu from "../../../Components/TopMenu/TopMenu";
-import VideoBackground from '../../../Components/VideoBackground/VideoBackground';
 import AddResearchCard from '../../../HOC/AddResearchCard/AddResearchCard';
 import fire from '../../../fire';
 
-
-
 export default function Research1() {
+   
 
     const [dataCard, setDataCard] = useState([])
 
@@ -26,11 +25,11 @@ export default function Research1() {
 
     }, []);
 
-
+    const [{ theme }, dispatch] = useStateValue();
+    
     return (
         <>
-            <VideoBackground />
-            <div className="content-video" >
+            <div className="content-video" style={ {color: theme.primary, background: theme.background } } >
                 <TopMenu />
                 <h1>Research ONE </h1>
                 <p>Research Cards Number {dataCard.length}  </p>
@@ -41,6 +40,7 @@ export default function Research1() {
     title={dataCard.title} 
      description={dataCard.description}
      link={dataCard.link}
+     style={ {color: theme.primary } }
      />
 })}
                     
