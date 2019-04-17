@@ -4,6 +4,7 @@ import './App.css';
 import RouterApp from './Router/RouterApp';
 import GeneralStyleButton from './Theme/GeneralStyleButton';
 import VideoBackground from './Components/VideoBackground/VideoBackground';
+import UserMenu from './HOC/UserMenu/UserMenu';
 
 
 function App(props) {

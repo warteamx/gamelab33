@@ -4,7 +4,7 @@ import CardResearch from '../../../Components/Card/CardResearch';
 import Grid from "@bit/mui-org.material-ui.grid";
 import TopMenu from "../../../Components/TopMenu/TopMenu";
 import AddResearchCard from '../../../HOC/AddResearchCard/AddResearchCard';
-import fire from '../../../fire';
+import {fire} from '../../../fire';
 
 export default function Research1() {
    
