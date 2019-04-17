@@ -30,12 +30,14 @@ function UserMenu() {
     >
       <Modal.Content>
         <button className="userMenu-close" onClick={() => setOpen(false)}>Close x </button>
+        <h1> User Menu </h1>
         <p>
-          Login {user.displayName}
+        { user.providerId ? user.displayName  : "Login"  }
       </p>
+      
 { user.providerId ? <LogOut/> : <LoginLogic /> }
         
-
+        <br></br>
         <p> Choose Style </p>
         <GeneralStyleButton />
         <br></br>

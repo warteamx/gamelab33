@@ -9,7 +9,7 @@ export default function LogOut() {
 
 
     return ( 
-        <>
+        <div>
         <button onClick={() =>{ 
             fireAuth.auth().signOut()
             dispatch({ type: "login", newUser: {
@@ -18,6 +18,6 @@ export default function LogOut() {
               }
         }) ;
             }}>LogOut</button>
-        </>
+        </div>
     )
 }
