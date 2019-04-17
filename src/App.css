@@ -105,3 +105,23 @@ a {
   height: 20px;
   clear: both;
 }
+
+.avatar-photo {
+  max-height: 25px;
+  border-radius: 50%;
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 9999;
+  top: 10px;
+  right: 30px;
+  background: transparent !important;
+
+}
+
+.userMenu-close {
+  
+  float: right;
+
+}

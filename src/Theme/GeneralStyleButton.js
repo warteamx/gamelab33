@@ -1,17 +1,14 @@
 import React from 'react';
 import { useStateValue } from '../State/State';
 import './GeneralSytleButton.scss';
-import UserMenu from '../HOC/UserMenu/UserMenu';
 
 export default function GeneralStyleButton() {
 
     const [{ theme }, dispatch] = useStateValue();
-
+    
     return (
-        <> 
-        
+        <>  
         <div className="GeneralStyleButton">
-        <UserMenu />
             <button style={{ color: "black", background:"white" }} value="light"
                 onClick={() => dispatch({
                     type: 'changeTheme',

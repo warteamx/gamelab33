@@ -16,6 +16,7 @@ var config = {
 
  export var fire = firebase.firestore();
  export var fireAuth = firebase;
+ export var firebaseApp = firebase;
 
  
 

@@ -5,7 +5,13 @@ import Labhub from '../Pages/Labhub/Labhub';
 import Research from '../Pages/Research/Research';
 import Project33 from '../Pages/Project33/Project33';
 import Research1 from '../Pages/Research/Research1/Research1';
+import SignedIn from '../Pages/SignedIn/SignedIn';
 
+
+
+function SignedInPage () {
+  return  <SignedIn/>
+}
 
 function Research1Page () {
   return  <Research1/>
@@ -38,6 +44,7 @@ function RouterApp() {
         <Route path="/Research" component={ResearchPage}></Route>
         <Route path="/Project33" component={Project33Page}></Route>
         <Route path="/Research1" component={Research1Page}></Route>
+        <Route path="/SignedIn" component={SignedInPage}></Route>
       </div>
       </Router>
     );
