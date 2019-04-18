@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './FormResearchCard.scss';
-import {fire} from '../../fire';
+import {fire, firebaseApp } from '../../../fire';
+import { useStateValue } from '../../../State/State';
 
 export default function FormResearchCard() {
+
+  const [{ user }, dispatch] = useStateValue();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -10,7 +13,10 @@ export default function FormResearchCard() {
   const [branch, setBranch] = useState("");
   const [type, setType] = useState("");
 
-  let data = { title, description, link, branch, type };
+  console.log(user.uid );
+
+  let data = { title, description, link, branch, type,};
+
 
   function sendData(e) {
     e.preventDefault();
@@ -20,16 +26,19 @@ export default function FormResearchCard() {
       description: data.description,
       link: data.link,
       branch: data.branch,
-      type: data.type
+      type: data.type,
+      uid: user.uid,
+      userName: user.displayName,
+      created: firebaseApp.firestore.Timestamp.fromDate(new Date())
     }).then(
       function (docRef) {
         console.log("Document written with ID: ", docRef.id);
         alert(`You added a new card:
-        title: ${data.title} 
-        description: ${data.link}
-        link: ${data.link}
-        branch: ${data.branch}
-        type: ${data.type}
+        - Title: ${data.title} 
+        - Description: ${data.link}
+        - Link: ${data.link}
+        - Branch: ${data.branch}
+        - Type: ${data.type}
         `)
         setTitle("");
         setDescription("");
@@ -41,6 +50,11 @@ export default function FormResearchCard() {
     ).catch(
       function (error) {
         console.error("Error adding document: ", error);
+        alert( `Error:
+        Oopps! Something went wrong.
+        
+        You need to be Logged in to be able to Add Cards. 
+       ${error} `)
       }
     );
   }
@@ -53,7 +67,7 @@ export default function FormResearchCard() {
           setTitle(e.target.value)
         }
         } />
-      <input className="inputForm" type="text" placeholder="Description" required minLength="30" maxLength="300"
+      <input className="inputForm" type="text" placeholder="Description" required minLength="10" maxLength="300"
         value={description} onChange={(e) => {
           e.preventDefault();
           setDescription(e.target.value)
@@ -93,43 +107,12 @@ export default function FormResearchCard() {
 
 
 <p className="paragraph"> Type of Card: </p>
-      <label>
-        <input className="inputRadio" type="radio" name="type" value="article" checked={type === "article"}
-          onChange={(e) => {
-            setBranch(e.target.value);
 
-          }} /> Article
-      </label>
-      <label>
-        <input className="inputRadio" type="radio" name="type" value="book" checked={type === "book"}
-          onChange={(e) => {
-            setBranch(e.target.value);
-
-          }} /> Book
-      </label>
-      <label>
-        <input className="inputRadio" type="radio" name="type" value="website" checked={type === "website"}
-          onChange={(e) => {
-            setBranch(e.target.value);
-
-          }} /> Website
-      </label>
-      <label>
-        <input className="inputRadio" type="radio" name="type" value="repository" checked={type === "repository"}
-          onChange={(e) => {
-            setBranch(e.target.value);
-
-          }} /> Git Repository
-      </label>
-      <label>
-        <input className="inputRadio" type="radio" name="type" value="other" checked={type === "other"}
-          onChange={(e) => {
-            setBranch(e.target.value);
-
-          }} /> Others...
-      </label>
-
-
+<input className="inputForm" type="text" placeholder="Keyword tags" required minLength="1" maxLength="50"
+        value={type} onChange={(e) => {
+          e.preventDefault();
+          setType(e.target.value)
+        }} />
 
       <button type="submit" className="submit"> Submit Card </button>
     </form>
